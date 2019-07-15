@@ -21,11 +21,29 @@ Shift+Alt+R 预览
 
 能携带任意数量和任意类型的参数，取代原始的回调和消息映射机制
 面向对象，独立于标准C/C++，必须借助QT工具moc(Meta ObjectCompiler,)C++预处理程序，为高层次事件处理自动生成所需要的代码
+
 必须把事件和相关的代码联系起来，才能对事件做出响应，才能使用不同的类型的对象能够进行通信
 Connect(foo,SIGNAL(click()),bar,SLOT(on()))
 
 F4是信号与槽的控制器
 
+在Qt当中提供了C++的扩展，提供了一种元对象系统的机制，（meta-object system）的机制，其中包含了信号与槽的内部机制，能够访问到QObject子类
+子类的元对象信息的功能
+Q_OBJECT宏生命了在每一个QObject子类中必须首先内省函数，metaObject()，tr()，qt_metacall()以及一些其他的,的函数
+Qt的MOC工具生成了用于Q_Object声明的所有的函数和所有的信号的实现
+同时也提供了connect()与disconnect()这样的内省函数
+
+资源管理是将QT当中的一些资源转换成C++代码的工具，一个资源文件的格式如下
+<!DOCTYPERCC><RCC version="1.0">
+<qresource>
+    <file>images/copy.png</file>
+    <file>images/cut.png</file>
+    <file>images/new.png</file>
+    <file>images/open.png</file>
+    <file>images/paste.png</file>
+    <file>images/save.png</file>
+</qresource>
+</RCC>
 
 
 
