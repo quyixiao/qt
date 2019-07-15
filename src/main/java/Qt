@@ -10,6 +10,25 @@ QPushButton
 QGroupBox
 <a = href="http://www.huiwen.com">汇文教育</a>
 QTableWidget
+QRadioButton QAbstractButton
+QPushButton
+
+
+Ctrl+Shift+H 水平布局
+Ctrl+L 垂直布局
+Shift+Alt+R 预览
+
+
+能携带任意数量和任意类型的参数，取代原始的回调和消息映射机制
+面向对象，独立于标准C/C++，必须借助QT工具moc(Meta ObjectCompiler,)C++预处理程序，为高层次事件处理自动生成所需要的代码
+必须把事件和相关的代码联系起来，才能对事件做出响应，才能使用不同的类型的对象能够进行通信
+Connect(foo,SIGNAL(click()),bar,SLOT(on()))
+
+F4是信号与槽的控制器
+
+
+
+
 
 
 
