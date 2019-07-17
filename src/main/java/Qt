@@ -33,7 +33,7 @@ Q_OBJECT宏生命了在每一个QObject子类中必须首先内省函数，metaO
 Qt的MOC工具生成了用于Q_Object声明的所有的函数和所有的信号的实现
 同时也提供了connect()与disconnect()这样的内省函数
 
-资源管理是将QT当中的一些资源转换成C++代码的工具，一个资源文件的格式如下
+资源管理是将QT当中的一些资源(界面相关的文件)转换成C++代码的工具，一个资源文件的格式如下,
 <!DOCTYPERCC><RCC version="1.0">
 <qresource>
     <file>images/copy.png</file>
@@ -46,6 +46,21 @@ Qt的MOC工具生成了用于Q_Object声明的所有的函数和所有的信号�
 </RCC>
 
 
+//
+QComboBox QListWidget QTableWidget QTreeWidget
+Item 项
+
+
+QMessageBox  消息框
+文件（&F） cout<<cin>>
+QFile setFileName open
+QFileDialog
+QDir
+QTextStream
+
+
+
+fileReadAll方法
 
 
 
